@@ -11,3 +11,9 @@ jobs:
     steps:
       - name: Prin a Welcome Message
         run: echo "Welcome to our first action workflow"
+
+      - name: Checkout Repo
+        uses: actions/checkout@v6.0.0
+
+      - name: List Repo Files 
+        run: ls -al

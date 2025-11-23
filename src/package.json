@@ -1,5 +1,5 @@
 {
-  "name": "app",
+  "name": "sinmple-app",
   "version": "0.1.0",
   "main": "src/app.js",
   "scripts": {

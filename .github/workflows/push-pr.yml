@@ -16,5 +16,5 @@ jobs:
       - name: Checkout COde
         uses: actions/checkout@v6.0.0
 
-      - name: Run Test
+      - name: Run tests
         run: npm test

@@ -1,5 +1,5 @@
-EXPECTED="HEllo, Test"
-OUTPUT=$(node -e "console.log(require'/src/app')('Test'))")
+EXPECTED="HEllo, Test!"
+OUTPUT=$(node -e "console.log(require('./src/app')('Test'))")
 if [ "$OUTPUT" == "$EXPECTED"]; then
 echp "Test Passed"
 exit 0

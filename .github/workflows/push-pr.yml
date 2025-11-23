@@ -9,12 +9,23 @@ on:
     branches:
       - main
       - "release/**"
+
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout COde
-        uses: actions/checkout@v6.0.0
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'   # أو الإصدار الذي تستخدمه
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: src   # إذا كان package.json داخل src
 
       - name: Run tests
         run: npm test
+        working-directory: src   # نفس المسار

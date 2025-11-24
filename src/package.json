@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "main": "src/app.js",
   "scripts": {
-    "test": "node src/app.js"
+    "pretest": "chmod +x src/test.sh",
+    "test": "bash src/test.sh"
   },
   "dependencies": {}
 }

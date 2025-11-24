@@ -1,6 +1,10 @@
 #!/bin/bash
 
 #src/test.sh
+echo "Running tests..."
+# ضع أوامر الاختبار هنا، مثلاً:
+node src/app.js
+
 EXPECTED="HEllo, Test!"
 
 OUTPUT=$(node -e "console.log(require('./src/app')('Test'))")

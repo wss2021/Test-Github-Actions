@@ -5,8 +5,10 @@ jobs:
   example:
     runs-on: ubuntu-latest
     steps:
+    - name: Set API Key
+      run: echo "API_Key=12345"
     - run: |
         dep= false
-        if [[ dep ]]; then
+        if [[ API_Key==12345 ]]; then
           echo "::warning::Deprecated Function Found!"
         fi

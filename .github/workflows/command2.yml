@@ -5,12 +5,15 @@ jobs:
   Example:
     runs-on: ubuntu-latest
     steps:
+      - name: Set API KEY
+        run: echo "API_KEY = 12345" >> $GITHUB_ENV
       - name: Check if a file exists
         run: |
           if [ -f "config.yml" ]; then
             echo "::debug::config.yml exists"
           else
-            echo "::error::config.yml file not exists"
+            echo "::add-mask::$API_KEY"
+            echo "::error::config.yml file not exists and API KEY $API_KEY"
           fi
 
 

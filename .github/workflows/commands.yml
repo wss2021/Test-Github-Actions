@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        dep=true
+        dep=false
         if [[ dep ]]; then
           echo "::warning::Deprecated Function Found!"
         fi

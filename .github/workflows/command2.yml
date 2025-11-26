@@ -1,0 +1,20 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  Example:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if a file exists
+        run: |
+          if [ -f "config.yml" ]; then
+            echo "::debug::config.yml exists"
+          else
+            echo "::error::config.yml file not exists"
+
+
+
+
+
+
+    

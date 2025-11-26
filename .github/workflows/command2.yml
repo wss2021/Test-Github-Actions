@@ -11,6 +11,7 @@ jobs:
             echo "::debug::config.yml exists"
           else
             echo "::error::config.yml file not exists"
+          fi
 
 
 

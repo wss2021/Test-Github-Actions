@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Set API Key
-      run: echo "API_Key=12345"
+      run: echo "API_Key=12345" >> $GITHUB_ENV
     - run: |
         dep= false
         if [[ API_Key==12345 ]]; then

@@ -9,6 +9,6 @@ jobs:
       run: echo "API_Key=12345" >> $GITHUB_ENV
     - run: |
         dep= false
-        if [[ $API_Key==12345 ]]; then
-          echo "::warning::Deprecated Function Found!"
+        if [[ dep ]]; then
+          echo "::warning::Using API Key $API_Key"
         fi

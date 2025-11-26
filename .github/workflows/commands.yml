@@ -7,8 +7,5 @@ jobs:
     steps:
     - name: Set API Key
       run: echo "API_Key=12345" >> $GITHUB_ENV
-    - run: |
-        dep= false
-        if [[ dep ]]; then
-          echo "::warning::Using API Key $API_Key"
-        fi
+    - name: Use API Key
+      run: echo "Use API KEY $API_Key"
